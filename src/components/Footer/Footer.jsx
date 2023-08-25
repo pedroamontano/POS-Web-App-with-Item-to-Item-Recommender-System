@@ -2,17 +2,27 @@ import cartIcon from "../../assets/icons/outline/shopping bag.svg";
 import searchIcon from "../../assets/icons/outline/search.svg";
 import scanIcon from "../../assets/icons/outline/barcode.svg";
 import storeIcon from "../../assets/icons/outline/store.svg";
+import darkCartIcon from "../../assets/icons/filled/shopping bag.svg";
+import darkSearchIcon from "../../assets/icons/filled/search.svg";
 import "./Footer.scss";
-function Footer() {
+function Footer(props) {
   return (
     <div className="footer">
-      <div className="footer__sub-section">
-        <img src={cartIcon} alt="cart logo" className="footer__image" />
+      <div className="footer__sub-section" onClick={props.handleCartClick}>
+        <img
+          src={props.isCartSelected ? darkCartIcon : cartIcon}
+          alt="cart logo"
+          className="footer__image"
+        />
         <p className="footer__text"> CART </p>
       </div>
 
-      <div className="footer__sub-section">
-        <img src={searchIcon} alt="search logo" className="footer__image" />
+      <div className="footer__sub-section" onClick={props.handleSearchClick}>
+        <img
+          src={props.isSearchSelected ? darkSearchIcon : searchIcon}
+          alt="search logo"
+          className="footer__image"
+        />
         <p className="footer__text"> SEARCH </p>
       </div>
 
