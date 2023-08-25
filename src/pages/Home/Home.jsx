@@ -5,8 +5,8 @@ import ItemList from "../../components/ItemList/ItemList";
 function Home(props) {
   return (
     <div>
-      <Header />
-      <ItemList />
+      <Header price={totalPrice} />
+      <ItemList setTotalPrice={setTotalPrice} />
       <Button className={"button__check-out"} text={"Checkout"} />
       <Footer
         handleCartClick={props.handleCartClick}
