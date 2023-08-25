@@ -2,7 +2,9 @@ import Button from "../../components/Button/Button";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import ItemList from "../../components/ItemList/ItemList";
+import { useState } from "react";
 function Home(props) {
+  const [totalPrice, setTotalPrice] = useState(0);
   return (
     <div>
       <Header price={totalPrice} />
