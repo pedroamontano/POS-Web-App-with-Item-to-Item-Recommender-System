@@ -1,7 +1,9 @@
+import './Header.scss';
+
 function Header({ price }) {
   return (
-    <div>
-      <h2>${price.toFixed(2)}</h2>
+    <div className='header'>
+      <p>Subtotal <span className='price'>${price.toFixed(2)}</span></p>
     </div>
   );
 }

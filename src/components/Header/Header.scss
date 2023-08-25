@@ -1,0 +1,12 @@
+@use '../../styles/partials/variables' as *;
+.header {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $black;
+    justify-content: center;
+    .price {
+        margin-left: 2rem;
+        font-weight: 600;
+        font-size: 25px;
+    }
+}
