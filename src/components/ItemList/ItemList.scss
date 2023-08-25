@@ -1,85 +1,83 @@
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/variables" as *;
 
 .cart {
-    display: flex;
-    margin-bottom: 0rem;
-    justify-content: center;
-    font-weight: 500;
+  display: flex;
+  margin-bottom: 0rem;
+  justify-content: center;
+  font-weight: 500;
 }
 .item-container {
-    margin:0 1rem;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-grey;
+  padding: 10px;
+
+  &__top {
     display: flex;
-    flex-direction: column;
-    background-color: $light-grey;
-    padding: 10px;
+  }
 
-    &__top {
-        display: flex;
+  .item-image {
+    // flex: 1;
+    width: 17vw;
+    img {
+      max-width: 60px;
+      max-height: 60px;
+    }
+  }
+
+  .item-details {
+    flex: 2;
+    padding: 0 10px;
+
+    h3 {
+      margin-top: 0;
     }
 
-    .item-image {
-        // flex: 1;
-        width: 17vw;
-        img {
-            max-width: 60px;
-            max-height: 60px;
-        }
+    p {
+      margin-bottom: 5px;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
-
-    .item-details {
-        flex: 2;
-        padding: 0 10px;
-
-        h3 {
-            margin-top: 0;
-        }
-
-        p {
-            margin-bottom: 5px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-    .item-price {
-        flex: 1;
-        text-align: right;
-        align-items: flex-start;
-    }
-    
-
+  }
+  .item-price {
+    flex: 1;
+    text-align: right;
+    align-items: flex-start;
+  }
 }
 
-.item-list{
-    margin-top: 1rem;
+.item-list {
+  margin-top: 1rem;
+  height: 325px;
 }
 
 .counter {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid $grey;
-    width: 30%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $grey;
+  width: 30%;
+  background-color: $white;
+
+  button {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
     background-color: $white;
 
-    button {
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        background-color: $white;
-
-        img  {
-            background-color: $white;
-        }
+    img {
+      background-color: $white;
     }
+  }
 
-    span {
-        display: inline-block;
-        width: 30px;
-        text-align: center;
-    }
+  span {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+  }
 }
