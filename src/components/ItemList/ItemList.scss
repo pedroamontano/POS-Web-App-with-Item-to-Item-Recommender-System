@@ -1,16 +1,25 @@
+@use '../../styles/partials/variables' as *;
+
 .item-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    background-color: $light-grey;
+    // align-items: center;
     padding: 10px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid $grey;
+
+    &__top {
+        display: flex;
+    }
 
     .item-image {
-        flex: 1;
-
+        // flex: 1;
+        width: 17vw;
         img {
-            max-width: 100px;
-            max-height: 100px;
+            max-width: 60px;
+            max-height: 60px;
         }
+
     }
 
     .item-details {
@@ -29,11 +38,12 @@
             }
         }
     }
-
     .item-price {
         flex: 1;
         text-align: right;
+        align-items: flex-start;
     }
+    
 
 }
 
@@ -41,11 +51,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid $grey;
+    width: 30%;
+    background-color: $white;
 
     button {
-        background-color: #f0f0f0;
         border: none;
-        padding: 5px 10px;
+        padding: 10px 10px;
         margin: 0 5px;
         cursor: pointer;
         transition: background-color 0.3s;
@@ -54,10 +66,6 @@
             background-color: #e0e0e0;
         }
 
-        &:disabled {
-            background-color: #d0d0d0;
-            cursor: not-allowed;
-        }
     }
 
     span {
@@ -65,4 +73,8 @@
         width: 30px;
         text-align: center;
     }
+}
+
+.binIcon {
+    content:url("../../assets/images/bin.svg");
 }
