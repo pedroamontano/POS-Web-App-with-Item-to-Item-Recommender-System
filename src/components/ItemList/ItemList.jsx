@@ -68,6 +68,7 @@ const ItemComponent = ({ item, count, onCountChange }) => {
             <span>{count}</span>
             <button onClick={() => onCountChange(count + 1)}>
               <img src={addIcon} alt = "add" />
+
             </button>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import Button from "../../components/Button/Button";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import ItemList from "../../components/ItemComponent/ItemList";
+import ItemList from "../../components/ItemList/ItemList";
 import { useState } from "react";
 function Home() {
   const [isCartSelected, setIsCartSelected] = useState(true);
