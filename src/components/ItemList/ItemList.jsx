@@ -58,11 +58,11 @@ const ItemComponent = ({ item, count, onCountChange }) => {
         <div className="item-container__bottom">
           <div className="counter">
             <button onClick={() => onCountChange(Math.max(count - 1, 0))}>
-                <image classname="binIcon" src={binIcon} alt="bin" />
+              <image classname="binIcon" src={binIcon} alt="bin" />
             </button>
             <span>{count}</span>
             <button onClick={() => onCountChange(count + 1)}>
-              <image src={addIcon} alt = "add" />
+              <image src={addIcon} alt="add" />
             </button>
           </div>
         </div>
