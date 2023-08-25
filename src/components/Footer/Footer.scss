@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-evenly;
+
+  &__sub-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__image {
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 14.52px;
+    font-weight: 400;
+  }
+}
