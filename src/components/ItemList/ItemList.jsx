@@ -40,9 +40,9 @@ const ItemComponent = ({ item, count, onCountChange }) => {
   const itemTotalPrice = item.price * count;
   return (
     <>
-    <div className="cart">
-     <p className="cart-p">Cart(1)</p> 
-    </div>
+      <div className="cart">
+        <p className="cart-p">Cart(1)</p>
+      </div>
       <div className="item-container">
         <div className="item-container__top">
           {/* Image at the left */}
@@ -63,12 +63,11 @@ const ItemComponent = ({ item, count, onCountChange }) => {
         <div className="item-container__bottom">
           <div className="counter">
             <button onClick={() => onCountChange(Math.max(count - 1, 0))}>
-                <img classname="subIcon" src={subIcon} alt="sub" />
+              <img classname="subIcon" src={subIcon} alt="sub" />
             </button>
             <span>{count}</span>
             <button onClick={() => onCountChange(count + 1)}>
-              <img src={addIcon} alt = "add" />
-
+              <img src={addIcon} alt="add" />
             </button>
           </div>
         </div>
