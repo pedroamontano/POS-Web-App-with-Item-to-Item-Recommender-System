@@ -7,6 +7,8 @@ function Home() {
   const [isCartSelected, setIsCartSelected] = useState(true);
   const [isSearchSelected, setIsSearchSelected] = useState(false);
 
+  const [totalPrice, setTotalPrice] = useState(0);
+
   const handleCartClick = () => {
     console.log("click detected");
     setIsCartSelected(true);
@@ -19,8 +21,8 @@ function Home() {
   };
   return (
     <div>
-      <Header />
-      <ItemList />
+      <Header price={totalPrice}/>
+      <ItemList setTotalPrice={setTotalPrice}/>
       <Button className={"button__check-out"} text={"Checkout"} />
       <Footer
         handleCartClick={handleCartClick}
