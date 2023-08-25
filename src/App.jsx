@@ -1,6 +1,6 @@
 
 import './App.scss';
-import ItemList from './components/ItemComponent/ItemList';
+import ItemList from './components/ItemList/ItemList';
 
 
 function App() {
