@@ -1,6 +1,16 @@
 .button__check-out {
   background-color: #212121;
-  border-radius: 25px;
-  padding: 16px 32px;
-  color: white;
+  border-radius: 55px;
+  padding: 0 1.55rem;
+  margin: 1.5rem 1rem;
+  width: 328px;
+  border: none;
+
+  &-text {
+    display: inline-flex;
+    color: white;
+    font-size: 14px;
+    line-height: 16.94px;
+    padding: 2px 0;
+  }
 }
