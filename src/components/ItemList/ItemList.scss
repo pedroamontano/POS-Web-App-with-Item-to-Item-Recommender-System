@@ -1,12 +1,17 @@
 @use '../../styles/partials/variables' as *;
 
+.cart {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
 .item-container {
+    margin:0 1rem;
     display: flex;
     flex-direction: column;
     background-color: $light-grey;
-    // align-items: center;
     padding: 10px;
-    border: 1px solid $grey;
+    // border: 1px solid $grey;
 
     &__top {
         display: flex;
@@ -47,7 +52,12 @@
 
 }
 
+.item-list{
+    margin-top: 1rem;
+}
+
 .counter {
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,15 +67,18 @@
 
     button {
         border: none;
-        padding: 10px 10px;
-        margin: 0 5px;
+        padding: 5px 10px;
         cursor: pointer;
         transition: background-color 0.3s;
+        background-color: $white;
 
-        &:hover {
-            background-color: #e0e0e0;
+
+        // &:hover {
+        //     background-color: #e0e0e0;
+        // }
+        img  {
+            background-color: $white;
         }
-
     }
 
     span {
@@ -73,8 +86,4 @@
         width: 30px;
         text-align: center;
     }
-}
-
-.binIcon {
-    content:url("../../assets/images/bin.svg");
 }
