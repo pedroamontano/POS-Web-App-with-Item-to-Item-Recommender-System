@@ -26,8 +26,11 @@
 
     margin-block-end: 0em;
   }
-}
 
-.addition {
-  position: relative;
+  &__addition {
+    position: relative;
+    z-index: 1;
+    top: -78px;
+    background-color: white;
+  }
 }

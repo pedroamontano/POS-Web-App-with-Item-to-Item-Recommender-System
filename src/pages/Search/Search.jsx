@@ -1,5 +1,6 @@
 import Footer from "../../components/Footer/Footer";
 import searchPage from "../../assets/images/Item Search, Results.png";
+import "./Search.scss";
 
 function Search(props) {
   return (
@@ -10,7 +11,7 @@ function Search(props) {
         handleSearchClick={props.handleSearchClick}
         isCartSelected={props.isCartSelected}
         isSearchSelected={props.isSearchSelected}
-        additionalClass={`search__addition`}
+        className={`footer__addition`}
       />
     </div>
   );
