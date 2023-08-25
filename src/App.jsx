@@ -1,12 +1,11 @@
-
-import './App.scss';
-import ItemList from './components/ItemList/ItemList';
-
+import "./App.scss";
+import ItemList from "./components/ItemComponent/ItemList";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      <ItemList />
+      <Home />
     </div>
   );
 }
