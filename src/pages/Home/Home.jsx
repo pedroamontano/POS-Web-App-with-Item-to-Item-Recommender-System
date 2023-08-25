@@ -3,32 +3,18 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import ItemList from "../../components/ItemList/ItemList";
 import { useState } from "react";
-function Home() {
-  const [isCartSelected, setIsCartSelected] = useState(true);
-  const [isSearchSelected, setIsSearchSelected] = useState(false);
-
+function Home(props) {
   const [totalPrice, setTotalPrice] = useState(0);
-
-  const handleCartClick = () => {
-    console.log("click detected");
-    setIsCartSelected(true);
-    setIsSearchSelected(false);
-  };
-
-  const handleSearchClick = () => {
-    setIsCartSelected(false);
-    setIsSearchSelected(true);
-  };
   return (
     <div>
-      <Header price={totalPrice}/>
-      <ItemList setTotalPrice={setTotalPrice}/>
+      <Header price={totalPrice} />
+      <ItemList setTotalPrice={setTotalPrice} />
       <Button className={"button__check-out"} text={"Checkout"} />
       <Footer
-        handleCartClick={handleCartClick}
-        handleSearchClick={handleSearchClick}
-        isCartSelected={isCartSelected}
-        isSearchSelected={isSearchSelected}
+        handleCartClick={props.handleCartClick}
+        handleSearchClick={props.handleSearchClick}
+        isCartSelected={props.isCartSelected}
+        isSearchSelected={props.isSearchSelected}
       />
     </div>
   );

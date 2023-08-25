@@ -1,0 +1,43 @@
+@use "../styles/partials/mixins" as *;
+// @use "../styles/partials/variables" as *;
+// @use "../styles/partials/fonts" as *;
+
+.recommendation {
+  background-color: rgb(228, 226, 226);
+  display: flex;
+  justify-content: space-evenly;
+  flex-shrink: 0;
+
+  @include tablet {
+  }
+
+  &-product {
+    text-align: center;
+  }
+  &-image1 {
+    content: url("../assets/images/coco\ loco\ shower\ oil.png");
+  }
+
+  &-image2 {
+    content: url("../assets/images/purity\ clarity\ massage\ bar.png");
+  }
+
+  &-image3 {
+    content: url("../assets/images/scrubbee\ body\ butter.png");
+  }
+
+  &-name {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  &-desc {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
