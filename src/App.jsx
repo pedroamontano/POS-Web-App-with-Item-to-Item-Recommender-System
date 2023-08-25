@@ -1,5 +1,5 @@
 import "./App.scss";
-import ItemList from "./components/ItemComponent/ItemList";
+
 import Home from "./pages/Home/Home";
 
 function App() {

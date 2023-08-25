@@ -11,7 +11,6 @@
     flex-direction: column;
     background-color: $light-grey;
     padding: 10px;
-    // border: 1px solid $grey;
 
     &__top {
         display: flex;
@@ -72,10 +71,6 @@
         transition: background-color 0.3s;
         background-color: $white;
 
-
-        // &:hover {
-        //     background-color: #e0e0e0;
-        // }
         img  {
             background-color: $white;
         }

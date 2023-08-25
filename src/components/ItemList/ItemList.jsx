@@ -13,27 +13,6 @@ const itemsData = [
     description: "SHOWER OIL",
     price: 10.5,
   },
-  // {
-  //   id: 2,
-  //   imgUrl: "https://via.placeholder.com/100",
-  //   name: "Item B",
-  //   description: "This is a description for Item B.",
-  //   price: 29.99,
-  // },
-  // {
-  //   id: 3,
-  //   imgUrl: "https://via.placeholder.com/100",
-  //   name: "Item C",
-  //   description: "This is a description for Item C.",
-  //   price: 24.99,
-  // },
-  // {
-  //   id: 4,
-  //   imgUrl: "https://via.placeholder.com/100",
-  //   name: "Item D",
-  //   description: "This is a description for Item D.",
-  //   price: 15.99,
-  // },
 ];
 
 const ItemComponent = ({ item, count, onCountChange }) => {
@@ -41,7 +20,7 @@ const ItemComponent = ({ item, count, onCountChange }) => {
   return (
     <>
     <div className="cart">
-     <p className="cart-p">Cart(1)</p> 
+     <p className="cart-p">Cart({count})</p> 
     </div>
       <div className="item-container">
         <div className="item-container__top">
@@ -63,7 +42,7 @@ const ItemComponent = ({ item, count, onCountChange }) => {
         <div className="item-container__bottom">
           <div className="counter">
             <button onClick={() => onCountChange(Math.max(count - 1, 0))}>
-                <img classname="subIcon" src={subIcon} alt="sub" />
+                <img className="subIcon" src={subIcon} alt="sub" />
             </button>
             <span>{count}</span>
             <button onClick={() => onCountChange(count + 1)}>
@@ -76,7 +55,7 @@ const ItemComponent = ({ item, count, onCountChange }) => {
   );
 };
 
-const ItemList = () => {
+const ItemList = ({setTotalPrice}) => {
   const initialCounts = itemsData.reduce(
     (acc, item) => ({ ...acc, [item.id]: 1 }),
     {}
@@ -89,11 +68,17 @@ const ItemList = () => {
       [id]: newCount,
     }));
   };
-
-  const totalPrice = itemsData.reduce(
-    (sum, item) => sum + itemCounts[item.id] * item.price,
+  const newTotalPrice = itemsData.reduce(
+    (sum, item) => {
+      if(item.id in itemCounts) {
+        return sum + itemCounts[item.id] * item.price;
+      }
+      return sum;
+    },
     0
   );
+
+  setTotalPrice(newTotalPrice);
 
   return (
     <div className="item-list">
