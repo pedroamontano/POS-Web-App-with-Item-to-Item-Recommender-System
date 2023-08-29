@@ -29,4 +29,4 @@ How might we craft an open-source innovative shopping experience that adapts to 
 7. David Ko - UX Design
 
 ## The Solution
-A web application point of sale system for the store's staff. The application has a recommender system feature based on the ingredients of the products being purchased by the customer. The staff provides valuable product story telling for the Lush brand, these recommendations serve as a tool for the staff and could provide horizontal sales growth. The recommender system does not use any consumer data, which is key to the privacy policy for Lush.
+A web application point of sale system for the store's staff. The application has a recommender system feature based on the ingredients of the products being purchased by the customer. The staff provides valuable product story telling for the Lush brand, these recommendations serve as a tool for the staff and could provide horizontal sales growth. The recommender system does not use any consumer data, which is key Lush's privacy policy.
