@@ -20,10 +20,13 @@ This opens up endless possibilities in the future as more developers in this spa
 How might we craft an open-source innovative shopping experience that adapts to the needs of an ever-evolving market, while leading by example with our digital ethics? 
 
 ### The Team
-Pedro A. Montano - Data Scientist
-Daria Samsonova - Data Scientist
-Jeff Ma - Web Development
-Yuna Li - Web Development
-Rahul Sharma - Web Development
-Camilla Gomes - UX Design
-David Ko - UX Design
+1. Pedro A. Montano - Data Scientist
+2. Daria Samsonova - Data Scientist
+3. Jeff Ma - Web Development
+4. Yuna Li - Web Development
+5. Rahul Sharma - Web Development
+6. Camilla Gomes - UX Design
+7. David Ko - UX Design
+
+### The Solution
+A web application point of sale system for the store's staff. The application has a recommender system feature based on the ingredients of the products being purchased by the customer. The staff provides valuable product story telling for the Lush brand, these recommendations serve as a tool for the staff and could provide horizontal sales growth. The recommender system does not use any consumer data, which is key to the privacy policy for Lush.
